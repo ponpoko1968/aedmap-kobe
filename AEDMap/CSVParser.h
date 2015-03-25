@@ -21,7 +21,7 @@
 //     distribution.
 //
 
-//#import <Cocoa/Cocoa.h>
+#import <UIKit/UIKit.h>
 
 @interface CSVParser : NSObject
 {

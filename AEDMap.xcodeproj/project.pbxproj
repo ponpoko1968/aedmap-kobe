@@ -10,6 +10,8 @@
 		A68D8D731AC2D3E9007E6D28 /* CSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A68D8D721AC2D3E9007E6D28 /* CSVParser.m */; };
 		A68D8D771AC2D469007E6D28 /* AMDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A68D8D761AC2D469007E6D28 /* AMDataManager.m */; };
 		A68D8D7A1AC2D99B007E6D28 /* aed_list.csv in Resources */ = {isa = PBXBuildFile; fileRef = A68D8D791AC2D99B007E6D28 /* aed_list.csv */; };
+		A68D8D7B1AC2D9F7007E6D28 /* AMDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A68D8D761AC2D469007E6D28 /* AMDataManager.m */; };
+		A68D8D7C1AC2DFB4007E6D28 /* aed_list.csv in Resources */ = {isa = PBXBuildFile; fileRef = A68D8D791AC2D99B007E6D28 /* aed_list.csv */; };
 		A6ED60CE1AB550A400EA5F9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED60CD1AB550A400EA5F9F /* main.m */; };
 		A6ED60D11AB550A400EA5F9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED60D01AB550A400EA5F9F /* AppDelegate.m */; };
 		A6ED60D41AB550A400EA5F9F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED60D31AB550A400EA5F9F /* FirstViewController.m */; };
@@ -280,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68D8D7C1AC2DFB4007E6D28 /* aed_list.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6ED60EB1AB550A500EA5F9F /* AEDMapTests.m in Sources */,
+				A68D8D7B1AC2D9F7007E6D28 /* AMDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,12 +482,20 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PREFIX_HEADER = "AEDMap/AEDMap-PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public/\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+				);
 				INFOPLIST_FILE = AEDMapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AEDMap.app/AEDMap";
 			};
@@ -497,8 +509,16 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PREFIX_HEADER = "AEDMap/AEDMap-PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public/\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+				);
 				INFOPLIST_FILE = AEDMapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AEDMap.app/AEDMap";
 			};

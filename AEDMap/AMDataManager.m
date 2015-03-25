@@ -22,7 +22,7 @@ static AMDataManager* instance = nil;
   dispatch_once(&onceToken, ^{
     instance = [[self alloc] init];
   });
-  
+
   return instance;
 }
 
@@ -40,7 +40,7 @@ static AMDataManager* instance = nil;
 {
   _AEDData = [[NSMutableArray alloc] init];
 
-  NSString *csvFile = [[NSBundle mainBundle] pathForResource:@"calendar" ofType:@"tsv"];
+  NSString *csvFile = [[NSBundle mainBundle] pathForResource:@"aed_list" ofType:@"csv"];
   NSError *err = nil;
   NSString *csvString = [NSString stringWithContentsOfFile:csvFile encoding:NSUTF8StringEncoding error:&err];
 
@@ -49,7 +49,7 @@ static AMDataManager* instance = nil;
   }
   CSVParser *parser =
     [[CSVParser alloc] initWithString:csvString
-			    separator:@"\t"
+			    separator:@","
 			     hasHeader:NO
 			    fieldNames: @[@"交付番号",
 					   @"管轄",
@@ -75,7 +75,11 @@ static AMDataManager* instance = nil;
 
   [_AEDData addObject:aRecord];
 
+}
 
+-(NSArray*) allList
+{
+  return _AEDData;
 }
 
 @end

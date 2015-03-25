@@ -10,4 +10,10 @@
 
 @interface AMDataManager : NSObject
 
++ (instancetype)sharedClient;
+
+
+-(void)loadData;
+-(NSArray*) allList;
+
 @end

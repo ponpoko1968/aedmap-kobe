@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "AMDataManager.h"
 
 @interface AEDMapTests : XCTestCase
 
@@ -25,9 +26,12 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testReadData {
     // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+  AMDataManager* manager = [AMDataManager sharedClient];
+  [manager loadData];
+  NSInteger count = [[manager allList] count];
+  XCTAssert( count == 1937, @"件数は1937個であるべきところ、%ld個でした",count);
 }
 
 - (void)testPerformanceExample {
