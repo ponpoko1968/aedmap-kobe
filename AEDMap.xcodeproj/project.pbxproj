@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A68D8D6F1AC2CE1D007E6D28 /* AEDMap-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AEDMap-PrefixHeader.pch"; sourceTree = "<group>"; };
 		A6ED60C81AB550A400EA5F9F /* AEDMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEDMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6ED60CC1AB550A400EA5F9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6ED60CD1AB550A400EA5F9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		A6ED60CB1AB550A400EA5F9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A68D8D6F1AC2CE1D007E6D28 /* AEDMap-PrefixHeader.pch */,
 				A6ED60CC1AB550A400EA5F9F /* Info.plist */,
 				A6ED60CD1AB550A400EA5F9F /* main.m */,
 			);
@@ -348,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "AEDMap/AEDMap-PrefixHeader.pch";
 				INFOPLIST_FILE = AEDMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "AEDMap/AEDMap-PrefixHeader.pch";
 				INFOPLIST_FILE = AEDMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,6 +421,7 @@
 				A6ED60F01AB550A500EA5F9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6ED60F11AB550A500EA5F9F /* Build configuration list for PBXNativeTarget "AEDMapTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				A6ED60F31AB550A500EA5F9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
