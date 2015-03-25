@@ -1,0 +1,88 @@
+//
+//  PrefixHeader.pch
+//  WMSClient
+//
+//  Created by 越智 修司 on 2015/03/03.
+//  Copyright (c) 2015年 zephtech. All rights reserved.
+//
+
+#ifndef WMSClient_PrefixHeader_pch
+#define WMSClient_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <AFNetworking/AFNetworking.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+
+#ifdef DEBUG
+#	define Log(fmt, ...) NSLog((@"%s:%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#	define Log0() NSLog(@"%s:%d", __PRETTY_FUNCTION__, __LINE__ );
+#	define Log1(obj)   Log(@"%s = %@", #obj, obj)
+#	define Log2(fmt,obj)   Log(@"%s = " @#fmt, #obj, obj)
+#	define LogPoint(p) Log(@"%s = %@", #p, NSStringFromCGPoint(p))
+#	define LogRect(r)  Log(@"%s = %@", #r, NSStringFromCGRect(r))
+#	define LogSize(s)  Log(@"%s = %@", #s, NSStringFromCGSize(s))
+#	define LogIndexPath(ip)  Log(@"%s  %ld:%ld", #ip, (long)ip.section, (long)ip.row)
+#else
+#	define Log(...) ;
+#	define Log0(...) ;
+#	define Log1(...) ;
+#	define Log2(...) ;
+#	define LogPoint(p) ;
+#	define LogRect(p) ;
+#	define LogSize(p) ;
+#	define LogIndexPath(ip) ;
+#endif
+
+#define Notice(fmt, ...) NSLog
+
+#define kOwnerList		@"ninushis"
+#define kOwnerID		@"ninushiId"
+#define kOwnerName		@"ninushiName"
+#define kStaffCode		@"staffCode"
+#define kStaffName		@"staffName"
+#define kErrorCode		@"errorCode"
+#define kErrorMessage		@"errorMessage"
+
+// 受注No
+#define kReceivedOrderNo	@"juchuNo"
+
+// 出荷日付
+#define kShippingDate		@"shukkaYoteiDate"
+#define kOrderDetails		@"details"
+#define kJANCode		@"janCode"
+#define kExpectedQuantity	@"shijiSuryo"
+#define kInspectedQuantity	@"inspectedQuantity" /* 内部使用用キー */
+#define kItemName		@"shohinName"
+
+// 入荷No
+#define kDeliveryOrderNo	 @"nyukaNo"
+
+// 入荷予定日付
+#define kScheduledDeliveryDate   @"nyukaYoteiDate"
+
+// 予定数量
+#define kQuantityWillBeDelivered @"yoteiSuryo"
+
+// 伝票No
+#define kDetailSeqNo             @"denpyoSeq"
+
+// 入荷数量
+#define kQuantityDelivered       @"nyukaSuryo"
+
+// ロケーションコード
+#define kLocationCode		 @"locationCode"
+
+// 在庫数量
+#define kInventoryQuantity       @"zaikoSuryo"
+
+// 引き当て数量
+#define kReservationQuantity    @"hikiateSuryo"
+
+// 行き先ロケーションコード
+#define kDestinationLocationCode		 @"toLocationCode"
+
+// 数量
+#define kQuantity		@"suryo"
+#endif
