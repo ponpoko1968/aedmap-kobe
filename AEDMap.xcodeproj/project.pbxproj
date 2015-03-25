@@ -170,6 +170,7 @@
 		A6ED60C01AB550A400EA5F9F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = AM;
 				LastUpgradeCheck = 0610;
 				TargetAttributes = {
 					A6ED60C71AB550A400EA5F9F = {
