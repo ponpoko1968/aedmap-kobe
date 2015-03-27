@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-@interface AMMapViewController : UIViewController<CLLocationManagerDelegate>
+@interface AMMapViewController : UIViewController<CLLocationManagerDelegate,MKMapViewDelegate>
 
 
 @end

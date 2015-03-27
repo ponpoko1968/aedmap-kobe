@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface AMDataManager : NSObject
+@interface AMDataManager : NSObject<CLLocationManagerDelegate>
 
-+ (instancetype)sharedClient;
++ (instancetype)sharedInstance;
+-(void)activateLocationManager;
+-(NSMutableSet*) pointsInRegion:(MKCoordinateRegion) region;
+-(NSDictionary*) pointDataWithLocation:(CLLocation*)location;
 
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 -(void)loadData;
 -(NSArray*) allList;

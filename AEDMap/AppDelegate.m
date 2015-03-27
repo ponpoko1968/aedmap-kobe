@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "AMDataManager.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  AMDataManager* manager = [AMDataManager sharedInstance];
+  [manager loadData];
   return YES;
 }
 

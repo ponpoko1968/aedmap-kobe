@@ -18,6 +18,12 @@
 		A6E60F8C1AC50EF0008BEBD3 /* AEDMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F8B1AC50EF0008BEBD3 /* AEDMapTests.m */; };
 		A6E60F961AC50FDD008BEBD3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E60F951AC50FDD008BEBD3 /* CoreLocation.framework */; };
 		A6E60F981AC512C2008BEBD3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E60F971AC512C2008BEBD3 /* MapKit.framework */; };
+		A6E60F9E1AC53922008BEBD3 /* AMDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F9B1AC53922008BEBD3 /* AMDataManager.m */; };
+		A6E60F9F1AC53922008BEBD3 /* CSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F9D1AC53922008BEBD3 /* CSVParser.m */; };
+		A6E60FA11AC53C06008BEBD3 /* aed_list.csv in Resources */ = {isa = PBXBuildFile; fileRef = A6E60FA01AC53C06008BEBD3 /* aed_list.csv */; };
+		A6E60FA21AC53C22008BEBD3 /* aed_list.csv in Resources */ = {isa = PBXBuildFile; fileRef = A6E60FA01AC53C06008BEBD3 /* aed_list.csv */; };
+		A6E60FA71AC540FF008BEBD3 /* AMDataAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60FA41AC540FF008BEBD3 /* AMDataAnnotationView.m */; };
+		A6E60FA81AC540FF008BEBD3 /* AMPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60FA61AC540FF008BEBD3 /* AMPointAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,15 @@
 		A6E60F951AC50FDD008BEBD3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A6E60F971AC512C2008BEBD3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A6E60F991AC514FB008BEBD3 /* AEDMap-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AEDMap-PrefixHeader.pch"; sourceTree = "<group>"; };
+		A6E60F9A1AC53922008BEBD3 /* AMDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDataManager.h; sourceTree = "<group>"; };
+		A6E60F9B1AC53922008BEBD3 /* AMDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDataManager.m; sourceTree = "<group>"; };
+		A6E60F9C1AC53922008BEBD3 /* CSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVParser.h; sourceTree = "<group>"; };
+		A6E60F9D1AC53922008BEBD3 /* CSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVParser.m; sourceTree = "<group>"; };
+		A6E60FA01AC53C06008BEBD3 /* aed_list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aed_list.csv; sourceTree = "<group>"; };
+		A6E60FA31AC540FF008BEBD3 /* AMDataAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDataAnnotationView.h; sourceTree = "<group>"; };
+		A6E60FA41AC540FF008BEBD3 /* AMDataAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDataAnnotationView.m; sourceTree = "<group>"; };
+		A6E60FA51AC540FF008BEBD3 /* AMPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPointAnnotation.h; sourceTree = "<group>"; };
+		A6E60FA61AC540FF008BEBD3 /* AMPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPointAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +132,15 @@
 		A6E60F6B1AC50EF0008BEBD3 /* AEDMap */ = {
 			isa = PBXGroup;
 			children = (
+				A6E60FA31AC540FF008BEBD3 /* AMDataAnnotationView.h */,
+				A6E60FA41AC540FF008BEBD3 /* AMDataAnnotationView.m */,
+				A6E60FA51AC540FF008BEBD3 /* AMPointAnnotation.h */,
+				A6E60FA61AC540FF008BEBD3 /* AMPointAnnotation.m */,
+				A6E60FA01AC53C06008BEBD3 /* aed_list.csv */,
+				A6E60F9A1AC53922008BEBD3 /* AMDataManager.h */,
+				A6E60F9B1AC53922008BEBD3 /* AMDataManager.m */,
+				A6E60F9C1AC53922008BEBD3 /* CSVParser.h */,
+				A6E60F9D1AC53922008BEBD3 /* CSVParser.m */,
 				A6E60F701AC50EF0008BEBD3 /* AppDelegate.h */,
 				A6E60F711AC50EF0008BEBD3 /* AppDelegate.m */,
 				A6E60F731AC50EF0008BEBD3 /* AMMapViewController.h */,
@@ -244,6 +268,7 @@
 				A6E60F7B1AC50EF0008BEBD3 /* Main.storyboard in Resources */,
 				A6E60F801AC50EF0008BEBD3 /* LaunchScreen.xib in Resources */,
 				A6E60F7D1AC50EF0008BEBD3 /* Images.xcassets in Resources */,
+				A6E60FA11AC53C06008BEBD3 /* aed_list.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E60FA21AC53C22008BEBD3 /* aed_list.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +321,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6E60F781AC50EF0008BEBD3 /* SecondViewController.m in Sources */,
+				A6E60FA81AC540FF008BEBD3 /* AMPointAnnotation.m in Sources */,
+				A6E60FA71AC540FF008BEBD3 /* AMDataAnnotationView.m in Sources */,
+				A6E60F9F1AC53922008BEBD3 /* CSVParser.m in Sources */,
 				A6E60F721AC50EF0008BEBD3 /* AppDelegate.m in Sources */,
 				A6E60F751AC50EF0008BEBD3 /* AMMapViewController.m in Sources */,
+				A6E60F9E1AC53922008BEBD3 /* AMDataManager.m in Sources */,
 				A6E60F6F1AC50EF0008BEBD3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
