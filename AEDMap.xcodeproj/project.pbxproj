@@ -7,69 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A68D8D731AC2D3E9007E6D28 /* CSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A68D8D721AC2D3E9007E6D28 /* CSVParser.m */; };
-		A68D8D771AC2D469007E6D28 /* AMDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A68D8D761AC2D469007E6D28 /* AMDataManager.m */; };
-		A68D8D7A1AC2D99B007E6D28 /* aed_list.csv in Resources */ = {isa = PBXBuildFile; fileRef = A68D8D791AC2D99B007E6D28 /* aed_list.csv */; };
-		A68D8D7B1AC2D9F7007E6D28 /* AMDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A68D8D761AC2D469007E6D28 /* AMDataManager.m */; };
-		A68D8D7C1AC2DFB4007E6D28 /* aed_list.csv in Resources */ = {isa = PBXBuildFile; fileRef = A68D8D791AC2D99B007E6D28 /* aed_list.csv */; };
-		A6ED60CE1AB550A400EA5F9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED60CD1AB550A400EA5F9F /* main.m */; };
-		A6ED60D11AB550A400EA5F9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED60D01AB550A400EA5F9F /* AppDelegate.m */; };
-		A6ED60D41AB550A400EA5F9F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED60D31AB550A400EA5F9F /* FirstViewController.m */; };
-		A6ED60D71AB550A400EA5F9F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED60D61AB550A400EA5F9F /* SecondViewController.m */; };
-		A6ED60DA1AB550A400EA5F9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6ED60D81AB550A400EA5F9F /* Main.storyboard */; };
-		A6ED60DC1AB550A500EA5F9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6ED60DB1AB550A500EA5F9F /* Images.xcassets */; };
-		A6ED60DF1AB550A500EA5F9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6ED60DD1AB550A500EA5F9F /* LaunchScreen.xib */; };
-		A6ED60EB1AB550A500EA5F9F /* AEDMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED60EA1AB550A500EA5F9F /* AEDMapTests.m */; };
-		C99DE70094F03DFFCF5B5DF6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D491FC4B0EDA840E3061883 /* libPods.a */; };
+		6B696FB5C3B161584B4CD94A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECBE9CBBDF39DE52A1893DF /* libPods.a */; };
+		A6E60F6F1AC50EF0008BEBD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F6E1AC50EF0008BEBD3 /* main.m */; };
+		A6E60F721AC50EF0008BEBD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F711AC50EF0008BEBD3 /* AppDelegate.m */; };
+		A6E60F751AC50EF0008BEBD3 /* AMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F741AC50EF0008BEBD3 /* AMMapViewController.m */; };
+		A6E60F781AC50EF0008BEBD3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F771AC50EF0008BEBD3 /* SecondViewController.m */; };
+		A6E60F7B1AC50EF0008BEBD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E60F791AC50EF0008BEBD3 /* Main.storyboard */; };
+		A6E60F7D1AC50EF0008BEBD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6E60F7C1AC50EF0008BEBD3 /* Images.xcassets */; };
+		A6E60F801AC50EF0008BEBD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E60F7E1AC50EF0008BEBD3 /* LaunchScreen.xib */; };
+		A6E60F8C1AC50EF0008BEBD3 /* AEDMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F8B1AC50EF0008BEBD3 /* AEDMapTests.m */; };
+		A6E60F961AC50FDD008BEBD3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E60F951AC50FDD008BEBD3 /* CoreLocation.framework */; };
+		A6E60F981AC512C2008BEBD3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E60F971AC512C2008BEBD3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A6ED60E51AB550A500EA5F9F /* PBXContainerItemProxy */ = {
+		A6E60F861AC50EF0008BEBD3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A6ED60C01AB550A400EA5F9F /* Project object */;
+			containerPortal = A6E60F611AC50EF0008BEBD3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A6ED60C71AB550A400EA5F9F;
+			remoteGlobalIDString = A6E60F681AC50EF0008BEBD3;
 			remoteInfo = AEDMap;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D491FC4B0EDA840E3061883 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FB5755AE57A62E81DC770F9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		A68D8D6F1AC2CE1D007E6D28 /* AEDMap-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AEDMap-PrefixHeader.pch"; sourceTree = "<group>"; };
-		A68D8D711AC2D3E9007E6D28 /* CSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVParser.h; sourceTree = "<group>"; };
-		A68D8D721AC2D3E9007E6D28 /* CSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVParser.m; sourceTree = "<group>"; };
-		A68D8D751AC2D469007E6D28 /* AMDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDataManager.h; sourceTree = "<group>"; };
-		A68D8D761AC2D469007E6D28 /* AMDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDataManager.m; sourceTree = "<group>"; };
-		A68D8D791AC2D99B007E6D28 /* aed_list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aed_list.csv; sourceTree = "<group>"; };
-		A6ED60C81AB550A400EA5F9F /* AEDMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEDMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6ED60CC1AB550A400EA5F9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6ED60CD1AB550A400EA5F9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A6ED60CF1AB550A400EA5F9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A6ED60D01AB550A400EA5F9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A6ED60D21AB550A400EA5F9F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		A6ED60D31AB550A400EA5F9F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		A6ED60D51AB550A400EA5F9F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		A6ED60D61AB550A400EA5F9F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		A6ED60D91AB550A400EA5F9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A6ED60DB1AB550A500EA5F9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A6ED60DE1AB550A500EA5F9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A6ED60E41AB550A500EA5F9F /* AEDMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AEDMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6ED60E91AB550A500EA5F9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6ED60EA1AB550A500EA5F9F /* AEDMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEDMapTests.m; sourceTree = "<group>"; };
-		F52A29DA725241873060DF8B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		00B60DB3602997F7FA70B781 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		343FF31CA01CEEDBD45252BF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5ECBE9CBBDF39DE52A1893DF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6E60F691AC50EF0008BEBD3 /* AEDMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEDMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6E60F6D1AC50EF0008BEBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6E60F6E1AC50EF0008BEBD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6E60F701AC50EF0008BEBD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A6E60F711AC50EF0008BEBD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A6E60F731AC50EF0008BEBD3 /* AMMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMMapViewController.h; sourceTree = "<group>"; };
+		A6E60F741AC50EF0008BEBD3 /* AMMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMMapViewController.m; sourceTree = "<group>"; };
+		A6E60F761AC50EF0008BEBD3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		A6E60F771AC50EF0008BEBD3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		A6E60F7A1AC50EF0008BEBD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6E60F7C1AC50EF0008BEBD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A6E60F7F1AC50EF0008BEBD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A6E60F851AC50EF0008BEBD3 /* AEDMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AEDMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6E60F8A1AC50EF0008BEBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6E60F8B1AC50EF0008BEBD3 /* AEDMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEDMapTests.m; sourceTree = "<group>"; };
+		A6E60F951AC50FDD008BEBD3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A6E60F971AC512C2008BEBD3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A6E60F991AC514FB008BEBD3 /* AEDMap-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AEDMap-PrefixHeader.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A6ED60C51AB550A400EA5F9F /* Frameworks */ = {
+		A6E60F661AC50EF0008BEBD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C99DE70094F03DFFCF5B5DF6 /* libPods.a in Frameworks */,
+				A6E60F981AC512C2008BEBD3 /* MapKit.framework in Frameworks */,
+				A6E60F961AC50FDD008BEBD3 /* CoreLocation.framework in Frameworks */,
+				6B696FB5C3B161584B4CD94A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6ED60E11AB550A500EA5F9F /* Frameworks */ = {
+		A6E60F821AC50EF0008BEBD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,128 +75,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		61D1F9E6EDDF2E6C579A7BCB /* Pods */ = {
+		176DF0217C5654705AFA50E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F52A29DA725241873060DF8B /* Pods.debug.xcconfig */,
-				7FB5755AE57A62E81DC770F9 /* Pods.release.xcconfig */,
+				00B60DB3602997F7FA70B781 /* Pods.debug.xcconfig */,
+				343FF31CA01CEEDBD45252BF /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A68D8D701AC2D3DB007E6D28 /* contrib */ = {
+		8B9D0C0D3AD453290BC4EC4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A68D8D711AC2D3E9007E6D28 /* CSVParser.h */,
-				A68D8D721AC2D3E9007E6D28 /* CSVParser.m */,
+				A6E60F971AC512C2008BEBD3 /* MapKit.framework */,
+				A6E60F951AC50FDD008BEBD3 /* CoreLocation.framework */,
+				5ECBE9CBBDF39DE52A1893DF /* libPods.a */,
 			);
-			name = contrib;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A68D8D741AC2D43B007E6D28 /* 共通クラス */ = {
+		A6E60F601AC50EF0008BEBD3 = {
 			isa = PBXGroup;
 			children = (
-				A68D8D751AC2D469007E6D28 /* AMDataManager.h */,
-				A68D8D761AC2D469007E6D28 /* AMDataManager.m */,
-			);
-			name = "共通クラス";
-			sourceTree = "<group>";
-		};
-		A68D8D781AC2D905007E6D28 /* データ */ = {
-			isa = PBXGroup;
-			children = (
-				A68D8D791AC2D99B007E6D28 /* aed_list.csv */,
-			);
-			name = "データ";
-			sourceTree = "<group>";
-		};
-		A6ED60BF1AB550A400EA5F9F = {
-			isa = PBXGroup;
-			children = (
-				A6ED60CA1AB550A400EA5F9F /* AEDMap */,
-				A6ED60E71AB550A500EA5F9F /* AEDMapTests */,
-				A6ED60C91AB550A400EA5F9F /* Products */,
-				61D1F9E6EDDF2E6C579A7BCB /* Pods */,
-				AB06CAD2C611B01417391C9E /* Frameworks */,
+				A6E60F6B1AC50EF0008BEBD3 /* AEDMap */,
+				A6E60F881AC50EF0008BEBD3 /* AEDMapTests */,
+				A6E60F6A1AC50EF0008BEBD3 /* Products */,
+				176DF0217C5654705AFA50E5 /* Pods */,
+				8B9D0C0D3AD453290BC4EC4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		A6ED60C91AB550A400EA5F9F /* Products */ = {
+		A6E60F6A1AC50EF0008BEBD3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A6ED60C81AB550A400EA5F9F /* AEDMap.app */,
-				A6ED60E41AB550A500EA5F9F /* AEDMapTests.xctest */,
+				A6E60F691AC50EF0008BEBD3 /* AEDMap.app */,
+				A6E60F851AC50EF0008BEBD3 /* AEDMapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A6ED60CA1AB550A400EA5F9F /* AEDMap */ = {
+		A6E60F6B1AC50EF0008BEBD3 /* AEDMap */ = {
 			isa = PBXGroup;
 			children = (
-				A68D8D781AC2D905007E6D28 /* データ */,
-				A68D8D741AC2D43B007E6D28 /* 共通クラス */,
-				A68D8D701AC2D3DB007E6D28 /* contrib */,
-				A6ED60CF1AB550A400EA5F9F /* AppDelegate.h */,
-				A6ED60D01AB550A400EA5F9F /* AppDelegate.m */,
-				A6ED60D21AB550A400EA5F9F /* FirstViewController.h */,
-				A6ED60D31AB550A400EA5F9F /* FirstViewController.m */,
-				A6ED60D51AB550A400EA5F9F /* SecondViewController.h */,
-				A6ED60D61AB550A400EA5F9F /* SecondViewController.m */,
-				A6ED60D81AB550A400EA5F9F /* Main.storyboard */,
-				A6ED60DB1AB550A500EA5F9F /* Images.xcassets */,
-				A6ED60DD1AB550A500EA5F9F /* LaunchScreen.xib */,
-				A6ED60CB1AB550A400EA5F9F /* Supporting Files */,
+				A6E60F701AC50EF0008BEBD3 /* AppDelegate.h */,
+				A6E60F711AC50EF0008BEBD3 /* AppDelegate.m */,
+				A6E60F731AC50EF0008BEBD3 /* AMMapViewController.h */,
+				A6E60F741AC50EF0008BEBD3 /* AMMapViewController.m */,
+				A6E60F761AC50EF0008BEBD3 /* SecondViewController.h */,
+				A6E60F771AC50EF0008BEBD3 /* SecondViewController.m */,
+				A6E60F791AC50EF0008BEBD3 /* Main.storyboard */,
+				A6E60F7C1AC50EF0008BEBD3 /* Images.xcassets */,
+				A6E60F7E1AC50EF0008BEBD3 /* LaunchScreen.xib */,
+				A6E60F6C1AC50EF0008BEBD3 /* Supporting Files */,
 			);
 			path = AEDMap;
 			sourceTree = "<group>";
 		};
-		A6ED60CB1AB550A400EA5F9F /* Supporting Files */ = {
+		A6E60F6C1AC50EF0008BEBD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A68D8D6F1AC2CE1D007E6D28 /* AEDMap-PrefixHeader.pch */,
-				A6ED60CC1AB550A400EA5F9F /* Info.plist */,
-				A6ED60CD1AB550A400EA5F9F /* main.m */,
+				A6E60F991AC514FB008BEBD3 /* AEDMap-PrefixHeader.pch */,
+				A6E60F6D1AC50EF0008BEBD3 /* Info.plist */,
+				A6E60F6E1AC50EF0008BEBD3 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A6ED60E71AB550A500EA5F9F /* AEDMapTests */ = {
+		A6E60F881AC50EF0008BEBD3 /* AEDMapTests */ = {
 			isa = PBXGroup;
 			children = (
-				A6ED60EA1AB550A500EA5F9F /* AEDMapTests.m */,
-				A6ED60E81AB550A500EA5F9F /* Supporting Files */,
+				A6E60F8B1AC50EF0008BEBD3 /* AEDMapTests.m */,
+				A6E60F891AC50EF0008BEBD3 /* Supporting Files */,
 			);
 			path = AEDMapTests;
 			sourceTree = "<group>";
 		};
-		A6ED60E81AB550A500EA5F9F /* Supporting Files */ = {
+		A6E60F891AC50EF0008BEBD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A6ED60E91AB550A500EA5F9F /* Info.plist */,
+				A6E60F8A1AC50EF0008BEBD3 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AB06CAD2C611B01417391C9E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5D491FC4B0EDA840E3061883 /* libPods.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A6ED60C71AB550A400EA5F9F /* AEDMap */ = {
+		A6E60F681AC50EF0008BEBD3 /* AEDMap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A6ED60EE1AB550A500EA5F9F /* Build configuration list for PBXNativeTarget "AEDMap" */;
+			buildConfigurationList = A6E60F8F1AC50EF0008BEBD3 /* Build configuration list for PBXNativeTarget "AEDMap" */;
 			buildPhases = (
-				45CF1B429BBA7DE01B39C992 /* Check Pods Manifest.lock */,
-				A6ED60C41AB550A400EA5F9F /* Sources */,
-				A6ED60C51AB550A400EA5F9F /* Frameworks */,
-				A6ED60C61AB550A400EA5F9F /* Resources */,
-				4B8212D71DF4F1121FBCDA98 /* Copy Pods Resources */,
+				A21892CA0F6299EB90132070 /* Check Pods Manifest.lock */,
+				A6E60F651AC50EF0008BEBD3 /* Sources */,
+				A6E60F661AC50EF0008BEBD3 /* Frameworks */,
+				A6E60F671AC50EF0008BEBD3 /* Resources */,
+				183333DC6A4DBFA49E2F9202 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,46 +177,47 @@
 			);
 			name = AEDMap;
 			productName = AEDMap;
-			productReference = A6ED60C81AB550A400EA5F9F /* AEDMap.app */;
+			productReference = A6E60F691AC50EF0008BEBD3 /* AEDMap.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A6ED60E31AB550A500EA5F9F /* AEDMapTests */ = {
+		A6E60F841AC50EF0008BEBD3 /* AEDMapTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A6ED60F11AB550A500EA5F9F /* Build configuration list for PBXNativeTarget "AEDMapTests" */;
+			buildConfigurationList = A6E60F921AC50EF0008BEBD3 /* Build configuration list for PBXNativeTarget "AEDMapTests" */;
 			buildPhases = (
-				A6ED60E01AB550A500EA5F9F /* Sources */,
-				A6ED60E11AB550A500EA5F9F /* Frameworks */,
-				A6ED60E21AB550A500EA5F9F /* Resources */,
+				A6E60F811AC50EF0008BEBD3 /* Sources */,
+				A6E60F821AC50EF0008BEBD3 /* Frameworks */,
+				A6E60F831AC50EF0008BEBD3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A6ED60E61AB550A500EA5F9F /* PBXTargetDependency */,
+				A6E60F871AC50EF0008BEBD3 /* PBXTargetDependency */,
 			);
 			name = AEDMapTests;
 			productName = AEDMapTests;
-			productReference = A6ED60E41AB550A500EA5F9F /* AEDMapTests.xctest */;
+			productReference = A6E60F851AC50EF0008BEBD3 /* AEDMapTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A6ED60C01AB550A400EA5F9F /* Project object */ = {
+		A6E60F611AC50EF0008BEBD3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AM;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "越智 修司";
 				TargetAttributes = {
-					A6ED60C71AB550A400EA5F9F = {
-						CreatedOnToolsVersion = 6.1.1;
+					A6E60F681AC50EF0008BEBD3 = {
+						CreatedOnToolsVersion = 6.2;
 					};
-					A6ED60E31AB550A500EA5F9F = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = A6ED60C71AB550A400EA5F9F;
+					A6E60F841AC50EF0008BEBD3 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = A6E60F681AC50EF0008BEBD3;
 					};
 				};
 			};
-			buildConfigurationList = A6ED60C31AB550A400EA5F9F /* Build configuration list for PBXProject "AEDMap" */;
+			buildConfigurationList = A6E60F641AC50EF0008BEBD3 /* Build configuration list for PBXProject "AEDMap" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -255,56 +225,39 @@
 				en,
 				Base,
 			);
-			mainGroup = A6ED60BF1AB550A400EA5F9F;
-			productRefGroup = A6ED60C91AB550A400EA5F9F /* Products */;
+			mainGroup = A6E60F601AC50EF0008BEBD3;
+			productRefGroup = A6E60F6A1AC50EF0008BEBD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A6ED60C71AB550A400EA5F9F /* AEDMap */,
-				A6ED60E31AB550A500EA5F9F /* AEDMapTests */,
+				A6E60F681AC50EF0008BEBD3 /* AEDMap */,
+				A6E60F841AC50EF0008BEBD3 /* AEDMapTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A6ED60C61AB550A400EA5F9F /* Resources */ = {
+		A6E60F671AC50EF0008BEBD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6ED60DA1AB550A400EA5F9F /* Main.storyboard in Resources */,
-				A6ED60DF1AB550A500EA5F9F /* LaunchScreen.xib in Resources */,
-				A6ED60DC1AB550A500EA5F9F /* Images.xcassets in Resources */,
-				A68D8D7A1AC2D99B007E6D28 /* aed_list.csv in Resources */,
+				A6E60F7B1AC50EF0008BEBD3 /* Main.storyboard in Resources */,
+				A6E60F801AC50EF0008BEBD3 /* LaunchScreen.xib in Resources */,
+				A6E60F7D1AC50EF0008BEBD3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6ED60E21AB550A500EA5F9F /* Resources */ = {
+		A6E60F831AC50EF0008BEBD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A68D8D7C1AC2DFB4007E6D28 /* aed_list.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		45CF1B429BBA7DE01B39C992 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4B8212D71DF4F1121FBCDA98 /* Copy Pods Resources */ = {
+		183333DC6A4DBFA49E2F9202 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -319,54 +272,66 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A21892CA0F6299EB90132070 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A6ED60C41AB550A400EA5F9F /* Sources */ = {
+		A6E60F651AC50EF0008BEBD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6ED60D71AB550A400EA5F9F /* SecondViewController.m in Sources */,
-				A6ED60D11AB550A400EA5F9F /* AppDelegate.m in Sources */,
-				A68D8D731AC2D3E9007E6D28 /* CSVParser.m in Sources */,
-				A6ED60D41AB550A400EA5F9F /* FirstViewController.m in Sources */,
-				A6ED60CE1AB550A400EA5F9F /* main.m in Sources */,
-				A68D8D771AC2D469007E6D28 /* AMDataManager.m in Sources */,
+				A6E60F781AC50EF0008BEBD3 /* SecondViewController.m in Sources */,
+				A6E60F721AC50EF0008BEBD3 /* AppDelegate.m in Sources */,
+				A6E60F751AC50EF0008BEBD3 /* AMMapViewController.m in Sources */,
+				A6E60F6F1AC50EF0008BEBD3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6ED60E01AB550A500EA5F9F /* Sources */ = {
+		A6E60F811AC50EF0008BEBD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6ED60EB1AB550A500EA5F9F /* AEDMapTests.m in Sources */,
-				A68D8D7B1AC2D9F7007E6D28 /* AMDataManager.m in Sources */,
+				A6E60F8C1AC50EF0008BEBD3 /* AEDMapTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A6ED60E61AB550A500EA5F9F /* PBXTargetDependency */ = {
+		A6E60F871AC50EF0008BEBD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A6ED60C71AB550A400EA5F9F /* AEDMap */;
-			targetProxy = A6ED60E51AB550A500EA5F9F /* PBXContainerItemProxy */;
+			target = A6E60F681AC50EF0008BEBD3 /* AEDMap */;
+			targetProxy = A6E60F861AC50EF0008BEBD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A6ED60D81AB550A400EA5F9F /* Main.storyboard */ = {
+		A6E60F791AC50EF0008BEBD3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A6ED60D91AB550A400EA5F9F /* Base */,
+				A6E60F7A1AC50EF0008BEBD3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A6ED60DD1AB550A500EA5F9F /* LaunchScreen.xib */ = {
+		A6E60F7E1AC50EF0008BEBD3 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A6ED60DE1AB550A500EA5F9F /* Base */,
+				A6E60F7F1AC50EF0008BEBD3 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -374,7 +339,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A6ED60EC1AB550A500EA5F9F /* Debug */ = {
+		A6E60F8D1AC50EF0008BEBD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -408,14 +373,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		A6ED60ED1AB550A500EA5F9F /* Release */ = {
+		A6E60F8E1AC50EF0008BEBD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -433,7 +398,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -443,16 +408,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		A6ED60EF1AB550A500EA5F9F /* Debug */ = {
+		A6E60F901AC50EF0008BEBD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F52A29DA725241873060DF8B /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 00B60DB3602997F7FA70B781 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "AEDMap/AEDMap-PrefixHeader.pch";
@@ -462,9 +427,9 @@
 			};
 			name = Debug;
 		};
-		A6ED60F01AB550A500EA5F9F /* Release */ = {
+		A6E60F911AC50EF0008BEBD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FB5755AE57A62E81DC770F9 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 343FF31CA01CEEDBD45252BF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "AEDMap/AEDMap-PrefixHeader.pch";
@@ -474,7 +439,7 @@
 			};
 			name = Release;
 		};
-		A6ED60F21AB550A500EA5F9F /* Debug */ = {
+		A6E60F931AC50EF0008BEBD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,26 +447,18 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_PREFIX_HEADER = "AEDMap/AEDMap-PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"${PODS_ROOT}/Headers/Public/\"",
-					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
-				);
 				INFOPLIST_FILE = AEDMapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AEDMap.app/AEDMap";
 			};
 			name = Debug;
 		};
-		A6ED60F31AB550A500EA5F9F /* Release */ = {
+		A6E60F941AC50EF0008BEBD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -509,16 +466,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_PREFIX_HEADER = "AEDMap/AEDMap-PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"${PODS_ROOT}/Headers/Public/\"",
-					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
-				);
 				INFOPLIST_FILE = AEDMapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AEDMap.app/AEDMap";
 			};
@@ -527,34 +476,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A6ED60C31AB550A400EA5F9F /* Build configuration list for PBXProject "AEDMap" */ = {
+		A6E60F641AC50EF0008BEBD3 /* Build configuration list for PBXProject "AEDMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A6ED60EC1AB550A500EA5F9F /* Debug */,
-				A6ED60ED1AB550A500EA5F9F /* Release */,
+				A6E60F8D1AC50EF0008BEBD3 /* Debug */,
+				A6E60F8E1AC50EF0008BEBD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A6ED60EE1AB550A500EA5F9F /* Build configuration list for PBXNativeTarget "AEDMap" */ = {
+		A6E60F8F1AC50EF0008BEBD3 /* Build configuration list for PBXNativeTarget "AEDMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A6ED60EF1AB550A500EA5F9F /* Debug */,
-				A6ED60F01AB550A500EA5F9F /* Release */,
+				A6E60F901AC50EF0008BEBD3 /* Debug */,
+				A6E60F911AC50EF0008BEBD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A6ED60F11AB550A500EA5F9F /* Build configuration list for PBXNativeTarget "AEDMapTests" */ = {
+		A6E60F921AC50EF0008BEBD3 /* Build configuration list for PBXNativeTarget "AEDMapTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A6ED60F21AB550A500EA5F9F /* Debug */,
-				A6ED60F31AB550A500EA5F9F /* Release */,
+				A6E60F931AC50EF0008BEBD3 /* Debug */,
+				A6E60F941AC50EF0008BEBD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A6ED60C01AB550A400EA5F9F /* Project object */;
+	rootObject = A6E60F611AC50EF0008BEBD3 /* Project object */;
 }

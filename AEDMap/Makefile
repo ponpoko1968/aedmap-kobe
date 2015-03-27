@@ -18,7 +18,7 @@ PROJECT_DIR    =\
 
 CLANG	    = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 ARCH	    = -arch armv7
-SDKPATH	    = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk
+SDKPATH	    = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk
 SDK	    = -isysroot $(SDKPATH)
 OS_VER_MIN  = -miphoneos-version-min=7.0
 OPTIONS     = -fsyntax-only -x objective-c -std=gnu99\
