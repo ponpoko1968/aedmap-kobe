@@ -6,6 +6,7 @@
 //  Copyright (c) 2013年 越智 修司. All rights reserved.
 //
 
+#import <ADClusterMapView/ADClusterMapView.h>
 #import "AMPointAnnotation.h"
 
 @implementation AMPointAnnotation

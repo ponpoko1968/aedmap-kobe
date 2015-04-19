@@ -12,23 +12,54 @@
 #import "AMDataAnnotationView.h"
 
 @interface AMMapViewController ()
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet ADClusterMapView *mapView;
 
 @end
 
 @implementation AMMapViewController
 {
   BOOL _observerRemoved;
-  NSMutableDictionary* _locationDict;
-  NSMutableSet*	       _oldPoints;
-  NSDictionary*	       _selectedData;
-  MKCoordinateSpan     _maximumDisplayableSpan;
+
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  _locationDict = [[NSMutableDictionary alloc] init];
-  _maximumDisplayableSpan = MKCoordinateSpanMake(0.05,0.05);
+  // 横展開のために外に出すこと
+  CLLocationCoordinate2D topLeftL = CLLocationCoordinate2DMake(135.011486, 34.845182);
+  CLLocationCoordinate2D bottomRightL = CLLocationCoordinate2DMake(135.327342,34.651100);
+  MKMapPoint topLeftM = MKMapPointForCoordinate(topLeftL);
+  MKMapPoint bottomRightM = MKMapPointForCoordinate(bottomRightL);
+
+  // self.mapView.visibleMapRect = MKMapRectMake(topLeftM.x,
+  // 					      topLeftM.y,
+  // 					      bottomRightM.x - topLeftM.x,
+  // 					      bottomRightM.y - topLeftM.y);
+
+
+  NSMutableArray * annotations = [[NSMutableArray alloc] init];
+
+  NSLog(@"Loading data…");
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+      AMDataManager* manager = [AMDataManager sharedInstance];
+
+
+
+      for (NSDictionary * aRecord in manager.allList) {
+	CLLocationDegrees longitude = [aRecord[@"経度"] doubleValue];
+	CLLocationDegrees latitude = [aRecord[@"緯度"] doubleValue];
+	CLLocation* location = [[CLLocation alloc] initWithLatitude:latitude
+							  longitude:longitude];
+
+	AMPointAnnotation* annotation = [[AMPointAnnotation alloc] initWithCoodinate:location.coordinate
+									  pointData:aRecord];
+
+	[annotations addObject:annotation];
+      }
+      dispatch_async(dispatch_get_main_queue(), ^{
+	  NSLog(@"Building KD-Tree…");
+	  [self.mapView setAnnotations:annotations];
+        });
+    });
 
 }
 
@@ -75,7 +106,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
   CLLocation* latestLocation = [locations lastObject];
-  
+
   Log(@"%f,%f",latestLocation.coordinate.latitude,latestLocation.coordinate.longitude);
   if(latestLocation.coordinate.longitude  == 0.0){
     Log(@"赤道上の位置");
@@ -88,75 +119,6 @@
     _observerRemoved = YES;
   }
 
-}
-
-- (void)mapView:(MKMapView *)_mapView regionDidChangeAnimated:(BOOL)animated
-{
-
-
-  MKCoordinateRegion region = self.mapView.region;
-  if( region.span.latitudeDelta >   _maximumDisplayableSpan.latitudeDelta
-      ||  region.span.longitudeDelta > _maximumDisplayableSpan.longitudeDelta ){
-    return;
-  }
-
-
-  AMDataManager* manager = [AMDataManager sharedInstance];
-  NSMutableSet* pointsInRegion = [manager pointsInRegion:self.mapView.region];
-
-
-
-
-
-
-  // 集合演算でリージョンから出たポイントを取り除く
-  if( _oldPoints ){
-    NSMutableSet* pointsToDeleted = [NSMutableSet setWithSet:_oldPoints];
-    [pointsToDeleted unionSet:pointsInRegion];
-    [pointsToDeleted minusSet:pointsInRegion];
-    for( CLLocation* location in pointsToDeleted){
-      NSString* locationString = [NSString stringWithFormat:@"%lf:%lf",location.coordinate.latitude,location.coordinate.longitude];
-
-      AMPointAnnotation* annotation = [_locationDict objectForKey:locationString];
-
-      if( annotation ){		// 必ず存在するはずだけど、念のため
-	[self.mapView removeAnnotation:annotation];
-	[_locationDict removeObjectForKey:locationString];
-      }else{
-	Log(@"warn:annotation not found");
-      }
-    }
-  }
-
-  if( ! _oldPoints){
-    _oldPoints = [[NSMutableSet alloc] init];
-  }
-
-  // 集合演算でリージョンに入ったポイントのみを追加する
-
-  NSMutableSet* pointsToAdded = [NSMutableSet setWithSet:_oldPoints];
-  [pointsToAdded unionSet:pointsInRegion];
-  [pointsToAdded minusSet:_oldPoints];
-
-  for( CLLocation* location in pointsToAdded){
-    NSString* locationString = [NSString stringWithFormat:@"%lf:%lf",location.coordinate.latitude,location.coordinate.longitude];
-
-    AMPointAnnotation* annotation = [_locationDict objectForKey:locationString];
-    if( annotation ){
-      [self.mapView removeAnnotation:annotation];
-      [_locationDict removeObjectForKey:locationString];
-    }else{
-      NSDictionary* pointData = [manager pointDataWithLocation:location];
-      annotation = [[AMPointAnnotation alloc] initWithCoodinate:location.coordinate pointData:pointData];
-      [_locationDict setObject:annotation forKey:locationString];
-      [self.mapView addAnnotation:annotation];
-    }
-
-  }
-  Log(@"annotations=%d",[self.mapView.annotations count]);
-
-
-  [_oldPoints setSet:pointsInRegion];
 }
 
 
@@ -175,10 +137,11 @@
   [self.mapView setRegion:region animated:YES];
 }
 
+#pragma mark - ADClusterMapViewDelegate
+
 - (MKAnnotationView *)mapView:(MKMapView *)_mapView
 	    viewForAnnotation:(id <MKAnnotation>)_annotation
 {
-  Log(@"");
   if ([_annotation isKindOfClass:[MKUserLocation class]])
     return nil;
   if ([_annotation isKindOfClass:[AMPointAnnotation class]]) {
@@ -201,5 +164,46 @@
     return annotationView;
   }
   return nil;
+}
+
+// - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+//     MKAnnotationView * pinView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ADClusterableAnnotation"];
+//     if (!pinView) {
+//         pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+//                                                reuseIdentifier:@"ADClusterableAnnotation"];
+//         pinView.image = [UIImage imageNamed:self.pictoName];
+//         pinView.canShowCallout = YES;
+//     }
+//     else {
+//         pinView.annotation = annotation;
+//     }
+//     return pinView;
+// }
+
+- (MKAnnotationView *)mapView:(ADClusterMapView *)mapView viewForClusterAnnotation:(id<MKAnnotation>)annotation {
+  MKAnnotationView * pinView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ADMapCluster"];
+    if (!pinView) {
+        pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+                                               reuseIdentifier:@"ADMapCluster"];
+        pinView.image = [UIImage imageNamed:@"second"];
+        pinView.canShowCallout = NO;
+    }
+    else {
+        pinView.annotation = annotation;
+    }
+    return pinView;
+}
+
+
+- (void)mapViewDidFinishClustering:(ADClusterMapView *)mapView {
+    NSLog(@"Done");
+}
+
+- (NSInteger)numberOfClustersInMapView:(ADClusterMapView *)mapView {
+    return 40;
+}
+
+- (double)clusterDiscriminationPowerForMapView:(ADClusterMapView *)mapView {
+    return 1.8;
 }
 @end

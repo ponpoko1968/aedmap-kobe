@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import <ADClusterMapView/ADClusterMapView.h>
+
 @interface AMMapViewController : UIViewController<CLLocationManagerDelegate,MKMapViewDelegate>
 
 
