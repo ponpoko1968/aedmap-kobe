@@ -18,7 +18,7 @@ PROJECT_DIR    =\
 
 CLANG	    = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 ARCH	    = -arch armv7
-SDKPATH	    = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk
+SDKPATH	    = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk
 SDK	    = -isysroot $(SDKPATH)
 OS_VER_MIN  = -miphoneos-version-min=7.0
 OPTIONS     = -fsyntax-only -x objective-c -std=gnu99\
@@ -66,6 +66,7 @@ INCLUDES    = \
  -I"$(PROJECT_DIR)/Pods/Headers/Public/AFNetworking"\
  -I"$(PROJECT_DIR)/Pods/SVProgressHUD"\
  -I"$(PROJECT_DIR)/Pods/GVUserDefaults/GVUserDefaults"\
+ -I"$(PROJECT_DIR)/Pods//ADCClusterMapView"\
  -I"$(PROJECT_DIR)/$(PROJECT_NAME)"\
  -include "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-PrefixHeader.pch"
 
