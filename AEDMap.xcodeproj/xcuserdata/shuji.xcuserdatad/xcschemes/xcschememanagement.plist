@@ -7,11 +7,21 @@
 		<key>AEDMap.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A6E60F681AC50EF0008BEBD3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A6E60F841AC50EF0008BEBD3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A6ED60C71AB550A400EA5F9F</key>
 		<dict>
 			<key>primary</key>

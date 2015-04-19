@@ -164,14 +164,15 @@
 // 指定地点へ地図を移動させてズームレベルを変更する.
 - (void) zoomMapAndCenterAtLatitude:(double) latitude andLongitude:(double) longitude
 {
-    MKCoordinateRegion region;
-    region.center.latitude  = latitude;
-    region.center.longitude = longitude;
-    MKCoordinateSpan span;
-    span.latitudeDelta  = 0.05;
-    span.longitudeDelta = 0.05;
-    region.span = span;
-    [self.mapView setRegion:region animated:YES];
+  Log(@"lon=%lf lat=%lf",longitude,latitude);
+  MKCoordinateRegion region;
+  region.center.latitude  = latitude;
+  region.center.longitude = longitude;
+  MKCoordinateSpan span;
+  span.latitudeDelta  = 0.05;
+  span.longitudeDelta = 0.05;
+  region.span = span;
+  [self.mapView setRegion:region animated:YES];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)_mapView
