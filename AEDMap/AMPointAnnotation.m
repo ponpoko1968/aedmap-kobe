@@ -10,21 +10,15 @@
 #import "AMPointAnnotation.h"
 
 @implementation AMPointAnnotation
-@synthesize coordinate;
-@synthesize title;
-@synthesize subtitle;
-@synthesize pointData;
 
 
--(id)initWithCoodinate:(CLLocationCoordinate2D)_coordinate pointData:(NSDictionary*)_pointData
+-(id)initWithCoodinate:(CLLocationCoordinate2D)xcoordinate pointData:(NSDictionary*)xpointData
 {
   if( (self = [[AMPointAnnotation alloc] init]) != nil ){
-    coordinate = _coordinate;
-    pointData = _pointData;
-    title = [_pointData objectForKey:@"施設名称"];
-    subtitle = [_pointData objectForKey:@"設置場所住所"];
-    // Log(@"title:\"%@\"",title);
-    // Log(@"subtitle:\"%@\"",subtitle);
+    _coordinate = xcoordinate;
+    _pointData = xpointData;
+    _title = [_pointData objectForKey:@"施設名称"];
+    _subtitle = [_pointData objectForKey:@"設置場所住所"];
 
   }
   return self;
@@ -32,7 +26,7 @@
 
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate
 {
-  coordinate = newCoordinate;
+  _coordinate = newCoordinate;
 }
 
 

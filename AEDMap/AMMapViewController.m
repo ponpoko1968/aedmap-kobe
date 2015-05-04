@@ -129,7 +129,13 @@
 							longitude:135.195614];
        [self zoomMapAndCenterAtLocation:location];
     }
+    @try{
+      [self.mapView.userLocation removeObserver:self forKeyPath:@"location"];
+    }
+    @catch(NSException* exception){
+    }
     _observerRemoved = YES;
+
   }
 
 }
@@ -153,12 +159,13 @@
 
 #pragma mark - ADClusterMapViewDelegate
 
-- (MKAnnotationView *)mapView:(MKMapView *)_mapView
-	    viewForAnnotation:(id <MKAnnotation>)_annotation
+- (MKAnnotationView *)mapView:(MKMapView *)_mapView viewForAnnotation:(id <MKAnnotation>)_annotation
 {
+  Log(@"%@",[[_annotation class] description]);
   if ([_annotation isKindOfClass:[MKUserLocation class]])
     return nil;
-  if ([_annotation isKindOfClass:[AMPointAnnotation class]]) {
+
+//  if ([_annotation isKindOfClass:[AMPointAnnotation class]]) {
     AMPointAnnotation* annotation = _annotation;
     // Try to dequeue an existing pin view first.
     // NSString* pointID = [annotation.pointData objectForKey:@"point_id"];
@@ -170,34 +177,23 @@
 							reuseIdentifier:@"annotation"];
 
     }
+    annotationView.canShowCallout = YES;
     annotationView.backgroundColor = [UIColor clearColor];
     annotationView.frame = CGRectMake(0,0,16,16);
     UIImageView* image = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,16,16)];
     image.image = [UIImage imageNamed:@"aed-icon"];
     [annotationView addSubview:image];
     return annotationView;
-  }
-  return nil;
+//  }
+
+//  return nil;
+
 }
 
-// - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-//     MKAnnotationView * pinView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ADClusterableAnnotation"];
-//     if (!pinView) {
-//         pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation
-//                                                reuseIdentifier:@"ADClusterableAnnotation"];
-//         pinView.image = [UIImage imageNamed:self.pictoName];
-//         pinView.canShowCallout = YES;
-//     }
-//     else {
-//         pinView.annotation = annotation;
-//     }
-//     return pinView;
-// }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
   Log(@"lat=%f,long=%f",self.mapView.userLocation.location.coordinate.latitude,
       self.mapView.userLocation.location.coordinate.longitude );
-
 }
 
 - (MKAnnotationView *)mapView:(ADClusterMapView *)mapView viewForClusterAnnotation:(id<MKAnnotation>)annotation {
