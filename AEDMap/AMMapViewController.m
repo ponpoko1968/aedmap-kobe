@@ -37,6 +37,8 @@
 
 
   NSMutableArray * annotations = [[NSMutableArray alloc] init];
+  [self.mapView.userLocation addObserver:self forKeyPath:@"location" options:0 context:NULL];
+  self.mapView.showsUserLocation = YES;
 
   NSLog(@"Loading data…");
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
@@ -114,8 +116,19 @@
     return;
   }
   if( !_observerRemoved ){
-    [self zoomMapAndCenterAtLatitude:latestLocation.coordinate.latitude
-			andLongitude:latestLocation.coordinate.longitude];
+
+    // 神戸市のだいたい中心から20キロ以内か
+    CLCircularRegion* region = [[CLCircularRegion alloc] initWithCenter:CLLocationCoordinate2DMake(34.734374,135.134395)
+							       radius:20 * 1000 // 20km
+							   identifier:@"aroundCity"];
+    if( [region containsCoordinate:latestLocation.coordinate] ){
+      [self zoomMapAndCenterAtLocation:latestLocation];
+    }else{
+      // 市役所にズーム
+       CLLocation* location = [[CLLocation alloc]initWithLatitude:34.689929
+							longitude:135.195614];
+       [self zoomMapAndCenterAtLocation:location];
+    }
     _observerRemoved = YES;
   }
 
@@ -124,12 +137,13 @@
 
 
 // 指定地点へ地図を移動させてズームレベルを変更する.
-- (void) zoomMapAndCenterAtLatitude:(double) latitude andLongitude:(double) longitude
+- (void) zoomMapAndCenterAtLocation:(CLLocation*) location
+
 {
-  Log(@"lon=%lf lat=%lf",longitude,latitude);
+  Log(@"lon=%lf lat=%lf",location.coordinate.longitude,location.coordinate.latitude);
   MKCoordinateRegion region;
-  region.center.latitude  = latitude;
-  region.center.longitude = longitude;
+  region.center.latitude  = location.coordinate.latitude;
+  region.center.longitude = location.coordinate.longitude;
   MKCoordinateSpan span;
   span.latitudeDelta  = 0.05;
   span.longitudeDelta = 0.05;
@@ -179,6 +193,12 @@
 //     }
 //     return pinView;
 // }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+  Log(@"lat=%f,long=%f",self.mapView.userLocation.location.coordinate.latitude,
+      self.mapView.userLocation.location.coordinate.longitude );
+
+}
 
 - (MKAnnotationView *)mapView:(ADClusterMapView *)mapView viewForClusterAnnotation:(id<MKAnnotation>)annotation {
   MKAnnotationView * pinView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ADMapCluster"];

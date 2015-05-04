@@ -55,6 +55,7 @@ static AMDataManager* instance = nil;
 -(instancetype)init
 {
   self=[super init];
+  self.locationManager = [[CLLocationManager alloc] init];
   return self;
 }
 
