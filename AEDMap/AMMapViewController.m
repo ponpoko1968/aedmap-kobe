@@ -24,16 +24,6 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // 横展開のために外に出すこと
-  CLLocationCoordinate2D topLeftL = CLLocationCoordinate2DMake(135.011486, 34.845182);
-  CLLocationCoordinate2D bottomRightL = CLLocationCoordinate2DMake(135.327342,34.651100);
-  MKMapPoint topLeftM = MKMapPointForCoordinate(topLeftL);
-  MKMapPoint bottomRightM = MKMapPointForCoordinate(bottomRightL);
-
-  // self.mapView.visibleMapRect = MKMapRectMake(topLeftM.x,
-  // 					      topLeftM.y,
-  // 					      bottomRightM.x - topLeftM.x,
-  // 					      bottomRightM.y - topLeftM.y);
 
 
   NSMutableArray * annotations = [[NSMutableArray alloc] init];
@@ -117,6 +107,7 @@
   }
   if( !_observerRemoved ){
 
+    // TODO:横展開のために外に出すこと
     // 神戸市のだいたい中心から20キロ以内か
     CLCircularRegion* region = [[CLCircularRegion alloc] initWithCenter:CLLocationCoordinate2DMake(34.734374,135.134395)
 							       radius:20 * 1000 // 20km
@@ -165,14 +156,10 @@
   if ([_annotation isKindOfClass:[MKUserLocation class]])
     return nil;
 
-//  if ([_annotation isKindOfClass:[AMPointAnnotation class]]) {
     AMPointAnnotation* annotation = _annotation;
-    // Try to dequeue an existing pin view first.
-    // NSString* pointID = [annotation.pointData objectForKey:@"point_id"];
     AMDataAnnotationView* annotationView
       = (AMDataAnnotationView*)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"annotation"];
     if (!annotationView) {
-      // If an existing pin view was not available, create one.
       annotationView = [[AMDataAnnotationView alloc] initWithAnnotation:annotation
 							reuseIdentifier:@"annotation"];
 
@@ -184,10 +171,6 @@
     image.image = [UIImage imageNamed:@"aed-icon"];
     [annotationView addSubview:image];
     return annotationView;
-//  }
-
-//  return nil;
-
 }
 
 
