@@ -18,8 +18,7 @@
 
 @implementation AMMapViewController
 {
-  BOOL _observerRemoved;
-
+  BOOL _isInitialLocationShown;
 }
 
 - (void)viewDidLoad {
@@ -27,7 +26,7 @@
 
 
   NSMutableArray * annotations = [[NSMutableArray alloc] init];
-  [self.mapView.userLocation addObserver:self forKeyPath:@"location" options:0 context:NULL];
+  //[self.mapView.userLocation addObserver:self forKeyPath:@"location" options:0 context:NULL];
   self.mapView.showsUserLocation = YES;
 
   NSLog(@"Loading data…");
@@ -43,7 +42,7 @@
 							  longitude:longitude];
 
 	AMPointAnnotation* annotation = [[AMPointAnnotation alloc] initWithCoodinate:location.coordinate
-									  pointData:aRecord];
+									   pointData:aRecord];
 
 	[annotations addObject:annotation];
       }
@@ -62,6 +61,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+  _isInitialLocationShown = YES;
   AMDataManager* manager = [AMDataManager sharedInstance];
   manager.locationManager.delegate = self;
 
@@ -97,38 +97,42 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-  CLLocation* latestLocation = [locations lastObject];
-
-  Log(@"%f,%f",latestLocation.coordinate.latitude,latestLocation.coordinate.longitude);
-  if(latestLocation.coordinate.longitude  == 0.0){
-    Log(@"赤道上の位置");
-    _observerRemoved = NO;
-    return;
-  }
-  if( !_observerRemoved ){
+  if( _isInitialLocationShown ){
+    CLLocation* latestLocation = [locations lastObject];
 
     // TODO:横展開のために外に出すこと
     // 神戸市のだいたい中心から20キロ以内か
+
     CLCircularRegion* region = [[CLCircularRegion alloc] initWithCenter:CLLocationCoordinate2DMake(34.734374,135.134395)
-							       radius:20 * 1000 // 20km
-							   identifier:@"aroundCity"];
+								 radius:20 * 1000 // 20km
+							     identifier:@"aroundCity"];
     if( [region containsCoordinate:latestLocation.coordinate] ){
       [self zoomMapAndCenterAtLocation:latestLocation];
     }else{
-      // 市役所にズーム
-       CLLocation* location = [[CLLocation alloc]initWithLatitude:34.689929
-							longitude:135.195614];
-       [self zoomMapAndCenterAtLocation:location];
-    }
-    @try{
-      [self.mapView.userLocation removeObserver:self forKeyPath:@"location"];
-    }
-    @catch(NSException* exception){
-    }
-    _observerRemoved = YES;
+      UIAlertController* alert = [UIAlertController alertControllerWithTitle:@""
+								     message:@"エリア外にいるため、神戸市の中心部を表示します"
+							      preferredStyle:UIAlertControllerStyleAlert];
 
+      UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+							    handler:^(UIAlertAction * action) {
+	  // 市役所にズーム
+	  CLLocation* location = [[CLLocation alloc]initWithLatitude:34.689929
+							   longitude:135.195614];
+	  [self zoomMapAndCenterAtLocation:location];
+
+	}];
+
+      [alert addAction:defaultAction];
+      UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"キャンセル" style:UIAlertActionStyleCancel
+							   handler:^(UIAlertAction * action) {}];
+
+      [alert addAction:cancelAction];
+      [self presentViewController:alert animated:YES completion:nil];
+
+
+    }
+    _isInitialLocationShown = NO;
   }
-
 }
 
 
@@ -152,7 +156,6 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)_mapView viewForAnnotation:(id <MKAnnotation>)_annotation
 {
-  Log(@"%@",[[_annotation class] description]);
   if ([_annotation isKindOfClass:[MKUserLocation class]])
     return nil;
 
@@ -166,31 +169,36 @@
     }
     annotationView.canShowCallout = YES;
     annotationView.backgroundColor = [UIColor clearColor];
-    annotationView.frame = CGRectMake(0,0,16,16);
-    UIImageView* image = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,16,16)];
+    annotationView.frame = CGRectMake(0,0,36,36);
+    UIImageView* image = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,24,24)];
     image.image = [UIImage imageNamed:@"aed-icon"];
     [annotationView addSubview:image];
     return annotationView;
 }
 
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-  Log(@"lat=%f,long=%f",self.mapView.userLocation.location.coordinate.latitude,
-      self.mapView.userLocation.location.coordinate.longitude );
+- (NSString *)clusterTitleForMapView:(ADClusterMapView *)mapView
+{
+  return @"%d 施設";
 }
 
-- (MKAnnotationView *)mapView:(ADClusterMapView *)mapView viewForClusterAnnotation:(id<MKAnnotation>)annotation {
-  MKAnnotationView * pinView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ADMapCluster"];
-    if (!pinView) {
-        pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation
-                                               reuseIdentifier:@"ADMapCluster"];
-        pinView.image = [UIImage imageNamed:@"second"];
-        pinView.canShowCallout = NO;
-    }
-    else {
-        pinView.annotation = annotation;
-    }
-    return pinView;
+
+- (MKAnnotationView *)mapView:(ADClusterMapView *)mapView viewForClusterAnnotation:(id<MKAnnotation>)annotation
+{
+  MKAnnotationView * annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ADMapCluster"];
+  ADClusterAnnotation* ann = (ADClusterAnnotation*)annotation;
+  if (!annotationView) {
+    annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+						  reuseIdentifier:@"ADMapCluster"];
+    annotationView.backgroundColor = [UIColor clearColor];
+    annotationView.frame = CGRectMake(0,0,40,40);
+    annotationView.canShowCallout = YES;
+    UIImageView* image = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,40,40)];
+    image.image = [UIImage imageNamed:@"clustered-Icon"];
+    [annotationView addSubview:image];
+
+  }
+
+  return annotationView;
 }
 
 
