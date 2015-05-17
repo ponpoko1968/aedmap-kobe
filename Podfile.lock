@@ -36,6 +36,7 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - CCMPopup (1.1.0)
   - GVUserDefaults (0.9.5)
   - SVProgressHUD (1.1.3)
 
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - ADClusterMapView (~> 1.0.2)
   - AFNetworking (~> 2.4)
   - BlocksKit (~> 2.2)
+  - CCMPopup
   - GVUserDefaults (~> 0.9)
   - SVProgressHUD (~> 1.1)
 
@@ -50,6 +52,7 @@ SPEC CHECKSUMS:
   ADClusterMapView: 2bd494b8330e2fe24f830ddb4d35b9a52f2182f8
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  CCMPopup: e41fad5b8a0823c9cddea8eab6d431670c9dabe5
   GVUserDefaults: bd3efc5beab8f501d17e566eddc7acd6f2425c2a
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 

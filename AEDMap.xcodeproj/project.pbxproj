@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B696FB5C3B161584B4CD94A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECBE9CBBDF39DE52A1893DF /* libPods.a */; };
+		A6900A651B085B2A0088840F /* AMFacilityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6900A641B085B2A0088840F /* AMFacilityDetailViewController.m */; };
 		A6E60F6F1AC50EF0008BEBD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F6E1AC50EF0008BEBD3 /* main.m */; };
 		A6E60F721AC50EF0008BEBD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F711AC50EF0008BEBD3 /* AppDelegate.m */; };
 		A6E60F751AC50EF0008BEBD3 /* AMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F741AC50EF0008BEBD3 /* AMMapViewController.m */; };
@@ -40,6 +41,8 @@
 		00B60DB3602997F7FA70B781 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		343FF31CA01CEEDBD45252BF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5ECBE9CBBDF39DE52A1893DF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6900A631B085B2A0088840F /* AMFacilityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMFacilityDetailViewController.h; sourceTree = "<group>"; };
+		A6900A641B085B2A0088840F /* AMFacilityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMFacilityDetailViewController.m; sourceTree = "<group>"; };
 		A6E60F691AC50EF0008BEBD3 /* AEDMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEDMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E60F6D1AC50EF0008BEBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6E60F6E1AC50EF0008BEBD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				A6E60F7C1AC50EF0008BEBD3 /* Images.xcassets */,
 				A6E60F7E1AC50EF0008BEBD3 /* LaunchScreen.xib */,
 				A6E60F6C1AC50EF0008BEBD3 /* Supporting Files */,
+				A6900A631B085B2A0088840F /* AMFacilityDetailViewController.h */,
+				A6900A641B085B2A0088840F /* AMFacilityDetailViewController.m */,
 			);
 			path = AEDMap;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				A6E60F781AC50EF0008BEBD3 /* SecondViewController.m in Sources */,
 				A6E60FA81AC540FF008BEBD3 /* AMPointAnnotation.m in Sources */,
 				A6E60FA71AC540FF008BEBD3 /* AMDataAnnotationView.m in Sources */,
+				A6900A651B085B2A0088840F /* AMFacilityDetailViewController.m in Sources */,
 				A6E60F9F1AC53922008BEBD3 /* CSVParser.m in Sources */,
 				A6E60F721AC50EF0008BEBD3 /* AppDelegate.m in Sources */,
 				A6E60F751AC50EF0008BEBD3 /* AMMapViewController.m in Sources */,
@@ -452,6 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "AEDMap/AEDMap-PrefixHeader.pch";
 				INFOPLIST_FILE = AEDMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -464,6 +471,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "AEDMap/AEDMap-PrefixHeader.pch";
 				INFOPLIST_FILE = AEDMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -5,11 +5,13 @@
 //  Created by 越智 修司 on 2015/03/27.
 //  Copyright (c) 2015年 越智 修司. All rights reserved.
 //
+#import <CCMPopup/CCMPopupSegue.h>
 
 #import "AMMapViewController.h"
 #import "AMDataManager.h"
 #import "AMPointAnnotation.h"
 #import "AMDataAnnotationView.h"
+#import "AMFacilityDetailViewController.h"
 
 @interface AMMapViewController ()
 @property (weak, nonatomic) IBOutlet ADClusterMapView *mapView;
@@ -19,11 +21,13 @@
 @implementation AMMapViewController
 {
   BOOL _isInitialLocationShown;
+  NSDictionary* _selectedData;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
 
+  _isInitialLocationShown = YES;
 
   NSMutableArray * annotations = [[NSMutableArray alloc] init];
   //[self.mapView.userLocation addObserver:self forKeyPath:@"location" options:0 context:NULL];
@@ -61,7 +65,6 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-  _isInitialLocationShown = YES;
   AMDataManager* manager = [AMDataManager sharedInstance];
   manager.locationManager.delegate = self;
 
@@ -152,6 +155,33 @@
   [self.mapView setRegion:region animated:YES];
 }
 
+-(void)showDetails
+{
+  [self performSegueWithIdentifier:@"FromMapViewToDetailView" sender:self];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if ([[segue identifier] isEqualToString:@"FromMapViewToDetailView"]){
+    AMFacilityDetailViewController *detailViewController = [segue destinationViewController];
+    detailViewController.title = NSLocalizedString(@"施設詳細",@"");
+    detailViewController.pointData = _selectedData;
+
+    CCMPopupSegue *popupSegue = (CCMPopupSegue *)segue;
+    popupSegue.destinationBounds = CGRectMake(0,
+					      0,
+					      self.view.bounds.size.width*0.85,
+					      self.view.bounds.size.height*0.65);
+    popupSegue.backgroundBlurRadius = 7;
+    popupSegue.backgroundViewAlpha = 0.3;
+    popupSegue.backgroundViewColor = [UIColor blackColor];
+    popupSegue.dismissableByTouchingBackground = YES;
+
+  }
+}
+
+
+
 #pragma mark - ADClusterMapViewDelegate
 
 - (MKAnnotationView *)mapView:(MKMapView *)_mapView viewForAnnotation:(id <MKAnnotation>)_annotation
@@ -170,11 +200,29 @@
     annotationView.canShowCallout = YES;
     annotationView.backgroundColor = [UIColor clearColor];
     annotationView.frame = CGRectMake(0,0,36,36);
+
+    // Add a detail disclosure button to the callout.
+    UIButton* rightButton = [UIButton buttonWithType: UIButtonTypeDetailDisclosure];
+    [rightButton addTarget:self action:@selector(showDetails)
+	  forControlEvents:UIControlEventTouchUpInside];
+    annotationView.rightCalloutAccessoryView = rightButton;
+
+
     UIImageView* image = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,24,24)];
     image.image = [UIImage imageNamed:@"aed-icon"];
     [annotationView addSubview:image];
     return annotationView;
 }
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+  Log(@"");
+  ADClusterAnnotation* annotation = (ADClusterAnnotation*) view.annotation;
+
+  AMPointAnnotation* originalAnnotation = (AMPointAnnotation*) annotation.originalAnnotations[0];
+  _selectedData = originalAnnotation.pointData;
+}
+
 
 - (NSString *)clusterTitleForMapView:(ADClusterMapView *)mapView
 {
