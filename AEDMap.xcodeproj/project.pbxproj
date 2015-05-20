@@ -15,6 +15,7 @@
 		A6A0E4001B0CB91B0020A1CA /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0E3FF1B0CB91B0020A1CA /* UIColor+Hex.m */; };
 		A6A0E4031B0CB9DF0020A1CA /* AMTownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0E4021B0CB9DF0020A1CA /* AMTownListViewController.m */; };
 		A6A0E4061B0CBE9C0020A1CA /* AMFacilityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0E4051B0CBE9C0020A1CA /* AMFacilityListViewController.m */; };
+		A6A0E4081B0CC4BB0020A1CA /* Code4Kobe-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A0E4071B0CC4BB0020A1CA /* Code4Kobe-logo.png */; };
 		A6E60F6F1AC50EF0008BEBD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F6E1AC50EF0008BEBD3 /* main.m */; };
 		A6E60F721AC50EF0008BEBD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F711AC50EF0008BEBD3 /* AppDelegate.m */; };
 		A6E60F751AC50EF0008BEBD3 /* AMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F741AC50EF0008BEBD3 /* AMMapViewController.m */; };
@@ -59,6 +60,7 @@
 		A6A0E4021B0CB9DF0020A1CA /* AMTownListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTownListViewController.m; sourceTree = "<group>"; };
 		A6A0E4041B0CBE9C0020A1CA /* AMFacilityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMFacilityListViewController.h; sourceTree = "<group>"; };
 		A6A0E4051B0CBE9C0020A1CA /* AMFacilityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMFacilityListViewController.m; sourceTree = "<group>"; };
+		A6A0E4071B0CC4BB0020A1CA /* Code4Kobe-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Code4Kobe-logo.png"; sourceTree = "<group>"; };
 		A6E60F691AC50EF0008BEBD3 /* AEDMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEDMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E60F6D1AC50EF0008BEBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6E60F6E1AC50EF0008BEBD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				A6A0E3FE1B0CB91B0020A1CA /* UIColor+Hex.h */,
 				A6A0E3FF1B0CB91B0020A1CA /* UIColor+Hex.m */,
 				A6A0E3F71B0CACA00020A1CA /* 28HYOGO-utf-8.CSV */,
+				A6A0E4071B0CC4BB0020A1CA /* Code4Kobe-logo.png */,
 				A6E60FA01AC53C06008BEBD3 /* aed_list.csv */,
 				A6E60FA31AC540FF008BEBD3 /* AMDataAnnotationView.h */,
 				A6E60FA41AC540FF008BEBD3 /* AMDataAnnotationView.m */,
@@ -301,6 +304,7 @@
 				A6E60F801AC50EF0008BEBD3 /* LaunchScreen.xib in Resources */,
 				A6E60F7D1AC50EF0008BEBD3 /* Images.xcassets in Resources */,
 				A6A0E3FD1B0CB3EE0020A1CA /* wardlist.txt in Resources */,
+				A6A0E4081B0CC4BB0020A1CA /* Code4Kobe-logo.png in Resources */,
 				A6E60FA11AC53C06008BEBD3 /* aed_list.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
