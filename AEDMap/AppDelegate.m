@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "AMDataManager.h"
+#import "UIColor+HEX.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+
+
+
+  [[UITabBar appearance] setTintColor:[UIColor colorWithHex:@"D54A00"]];
+
   AMDataManager* manager = [AMDataManager sharedInstance];
   [manager loadData];
   return YES;

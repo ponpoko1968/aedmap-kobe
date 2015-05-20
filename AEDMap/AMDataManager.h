@@ -16,6 +16,8 @@
 -(void)activateLocationManager;
 -(NSMutableSet*) pointsInRegion:(MKCoordinateRegion) region;
 -(NSDictionary*) pointDataWithLocation:(CLLocation*)location;
+-(NSArray*) townListByWard:(NSString*)ward;
+-(NSArray*) facilitiesWithZip:(NSString*)zip;
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 

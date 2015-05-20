@@ -29,6 +29,11 @@ static AMDataManager* instance = nil;
   // Locationを格納した配列 _longitudeArray,_latitudeArrayを作るための一時配列
   NSMutableArray* _tempArray;
 
+  // 郵便番号から施設レコードへのマップ
+  NSMutableDictionary* _zip2AED;
+
+  // 区から町へのマップ
+  NSMutableDictionary* _ward2town;
 }
 
 #pragma mark - For Singleton
@@ -70,6 +75,8 @@ static AMDataManager* instance = nil;
   _latitudeArray = [[NSMutableArray alloc] init];
   _tempArray =  [[NSMutableArray alloc] init];
   _locationDict = [[NSMutableDictionary alloc] init];
+  _zip2AED = [[NSMutableDictionary alloc] init];
+  _ward2town = [[NSMutableDictionary alloc] init];
 
 
   NSString *csvFile = [[NSBundle mainBundle] pathForResource:@"aed_list" ofType:@"csv"];
@@ -134,6 +141,32 @@ static AMDataManager* instance = nil;
       return (NSComparisonResult)NSOrderedSame;
     }];
 
+  NSString *zipCodeCsvFile = [[NSBundle mainBundle] pathForResource:@"28HYOGO-utf-8" ofType:@"CSV"];
+  err = nil;
+  NSString *zipString = [NSString stringWithContentsOfFile:zipCodeCsvFile encoding:NSUTF8StringEncoding error:&err];
+
+  CSVParser *zipParser =
+    [[CSVParser alloc] initWithString:zipString
+			    separator:@","
+			     hasHeader:NO
+			    fieldNames: @[@"0",
+					   @"1",
+					   @"zip",
+					   @"3",
+					   @"4",
+					   @"5",
+					   @"6",
+					   @"ward",
+					   @"town",
+					   @"9",
+					   @"10",
+					   @"11",
+					   @"12",
+					   @"13",
+					   @"14",
+					  ]];
+  [zipParser parseRowsForReceiver:self selector:@selector(receiveZipRecord:)];
+
 
 }
 
@@ -146,11 +179,49 @@ static AMDataManager* instance = nil;
   CLLocationDegrees latitude = [aRecord[@"緯度"] doubleValue];
   CLLocation* location = [[CLLocation alloc] initWithLatitude:latitude
 						    longitude:longitude];
-
   [_locationDict setObject:aRecord forKey:
-		   [NSString stringWithFormat:@"%f:%f",latitude,longitude]
-		   ];
+   [NSString stringWithFormat:@"%f:%f",latitude,longitude]
+   ];
   [_tempArray addObject:location];
+
+  NSString* zipCode = [aRecord[@"郵便番号"]  stringByReplacingOccurrencesOfString:@"-" withString:@""];
+  if (!zipCode) {
+    return;
+  }
+  NSMutableArray* AEDs = _zip2AED[zipCode];
+
+  if( ! AEDs ){
+    AEDs = [[NSMutableArray alloc] init];
+    _zip2AED[zipCode] = AEDs;
+  }
+
+  [AEDs addObject:aRecord];
+
+}
+
+- (void)receiveZipRecord:(NSDictionary *)aRecord // parserからのコールバック
+{
+  NSString* zip = aRecord[@"zip"];
+  NSString* ward = [aRecord[@"ward"] stringByReplacingOccurrencesOfString:@"神戸市" withString:@""];
+  NSMutableArray* AEDs = _zip2AED[zip];
+  if( AEDs ){
+    NSMutableArray* towns = _ward2town[ward];
+    if( !towns ){
+      towns = [[NSMutableArray alloc] init];
+      _ward2town[ward] = towns;
+    }
+    [towns addObject:aRecord];
+  }
+}
+
+-(NSArray*) townListByWard:(NSString*)ward
+{
+  return _ward2town[ward];
+}
+
+-(NSArray*) facilitiesWithZip:(NSString*)zip
+{
+  return _zip2AED[zip];
 }
 
 ////////////////////////////////////////////////////////////////

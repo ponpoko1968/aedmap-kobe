@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		6B696FB5C3B161584B4CD94A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECBE9CBBDF39DE52A1893DF /* libPods.a */; };
 		A6900A651B085B2A0088840F /* AMFacilityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6900A641B085B2A0088840F /* AMFacilityDetailViewController.m */; };
+		A6A0E3F81B0CACA00020A1CA /* 28HYOGO-utf-8.CSV in Resources */ = {isa = PBXBuildFile; fileRef = A6A0E3F71B0CACA00020A1CA /* 28HYOGO-utf-8.CSV */; };
+		A6A0E3FB1B0CB3660020A1CA /* AMWardListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0E3FA1B0CB3660020A1CA /* AMWardListViewController.m */; };
+		A6A0E3FD1B0CB3EE0020A1CA /* wardlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6A0E3FC1B0CB3EE0020A1CA /* wardlist.txt */; };
+		A6A0E4001B0CB91B0020A1CA /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0E3FF1B0CB91B0020A1CA /* UIColor+Hex.m */; };
+		A6A0E4031B0CB9DF0020A1CA /* AMTownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0E4021B0CB9DF0020A1CA /* AMTownListViewController.m */; };
+		A6A0E4061B0CBE9C0020A1CA /* AMFacilityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0E4051B0CBE9C0020A1CA /* AMFacilityListViewController.m */; };
 		A6E60F6F1AC50EF0008BEBD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F6E1AC50EF0008BEBD3 /* main.m */; };
 		A6E60F721AC50EF0008BEBD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F711AC50EF0008BEBD3 /* AppDelegate.m */; };
 		A6E60F751AC50EF0008BEBD3 /* AMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E60F741AC50EF0008BEBD3 /* AMMapViewController.m */; };
@@ -43,6 +49,16 @@
 		5ECBE9CBBDF39DE52A1893DF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6900A631B085B2A0088840F /* AMFacilityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMFacilityDetailViewController.h; sourceTree = "<group>"; };
 		A6900A641B085B2A0088840F /* AMFacilityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMFacilityDetailViewController.m; sourceTree = "<group>"; };
+		A6A0E3F71B0CACA00020A1CA /* 28HYOGO-utf-8.CSV */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "28HYOGO-utf-8.CSV"; sourceTree = "<group>"; };
+		A6A0E3F91B0CB3660020A1CA /* AMWardListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMWardListViewController.h; sourceTree = "<group>"; };
+		A6A0E3FA1B0CB3660020A1CA /* AMWardListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMWardListViewController.m; sourceTree = "<group>"; };
+		A6A0E3FC1B0CB3EE0020A1CA /* wardlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wardlist.txt; sourceTree = "<group>"; };
+		A6A0E3FE1B0CB91B0020A1CA /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		A6A0E3FF1B0CB91B0020A1CA /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		A6A0E4011B0CB9DF0020A1CA /* AMTownListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMTownListViewController.h; sourceTree = "<group>"; };
+		A6A0E4021B0CB9DF0020A1CA /* AMTownListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTownListViewController.m; sourceTree = "<group>"; };
+		A6A0E4041B0CBE9C0020A1CA /* AMFacilityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMFacilityListViewController.h; sourceTree = "<group>"; };
+		A6A0E4051B0CBE9C0020A1CA /* AMFacilityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMFacilityListViewController.m; sourceTree = "<group>"; };
 		A6E60F691AC50EF0008BEBD3 /* AEDMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEDMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E60F6D1AC50EF0008BEBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6E60F6E1AC50EF0008BEBD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,27 +151,37 @@
 		A6E60F6B1AC50EF0008BEBD3 /* AEDMap */ = {
 			isa = PBXGroup;
 			children = (
+				A6A0E3FE1B0CB91B0020A1CA /* UIColor+Hex.h */,
+				A6A0E3FF1B0CB91B0020A1CA /* UIColor+Hex.m */,
+				A6A0E3F71B0CACA00020A1CA /* 28HYOGO-utf-8.CSV */,
+				A6E60FA01AC53C06008BEBD3 /* aed_list.csv */,
 				A6E60FA31AC540FF008BEBD3 /* AMDataAnnotationView.h */,
 				A6E60FA41AC540FF008BEBD3 /* AMDataAnnotationView.m */,
-				A6E60FA51AC540FF008BEBD3 /* AMPointAnnotation.h */,
-				A6E60FA61AC540FF008BEBD3 /* AMPointAnnotation.m */,
-				A6E60FA01AC53C06008BEBD3 /* aed_list.csv */,
 				A6E60F9A1AC53922008BEBD3 /* AMDataManager.h */,
 				A6E60F9B1AC53922008BEBD3 /* AMDataManager.m */,
-				A6E60F9C1AC53922008BEBD3 /* CSVParser.h */,
-				A6E60F9D1AC53922008BEBD3 /* CSVParser.m */,
-				A6E60F701AC50EF0008BEBD3 /* AppDelegate.h */,
-				A6E60F711AC50EF0008BEBD3 /* AppDelegate.m */,
-				A6E60F731AC50EF0008BEBD3 /* AMMapViewController.h */,
-				A6E60F741AC50EF0008BEBD3 /* AMMapViewController.m */,
-				A6E60F761AC50EF0008BEBD3 /* SecondViewController.h */,
-				A6E60F771AC50EF0008BEBD3 /* SecondViewController.m */,
-				A6E60F791AC50EF0008BEBD3 /* Main.storyboard */,
-				A6E60F7C1AC50EF0008BEBD3 /* Images.xcassets */,
-				A6E60F7E1AC50EF0008BEBD3 /* LaunchScreen.xib */,
-				A6E60F6C1AC50EF0008BEBD3 /* Supporting Files */,
 				A6900A631B085B2A0088840F /* AMFacilityDetailViewController.h */,
 				A6900A641B085B2A0088840F /* AMFacilityDetailViewController.m */,
+				A6E60F731AC50EF0008BEBD3 /* AMMapViewController.h */,
+				A6E60F741AC50EF0008BEBD3 /* AMMapViewController.m */,
+				A6E60FA51AC540FF008BEBD3 /* AMPointAnnotation.h */,
+				A6E60FA61AC540FF008BEBD3 /* AMPointAnnotation.m */,
+				A6A0E3F91B0CB3660020A1CA /* AMWardListViewController.h */,
+				A6A0E3FA1B0CB3660020A1CA /* AMWardListViewController.m */,
+				A6E60F701AC50EF0008BEBD3 /* AppDelegate.h */,
+				A6E60F711AC50EF0008BEBD3 /* AppDelegate.m */,
+				A6E60F9C1AC53922008BEBD3 /* CSVParser.h */,
+				A6E60F9D1AC53922008BEBD3 /* CSVParser.m */,
+				A6E60F7C1AC50EF0008BEBD3 /* Images.xcassets */,
+				A6E60F7E1AC50EF0008BEBD3 /* LaunchScreen.xib */,
+				A6E60F791AC50EF0008BEBD3 /* Main.storyboard */,
+				A6E60F761AC50EF0008BEBD3 /* SecondViewController.h */,
+				A6E60F771AC50EF0008BEBD3 /* SecondViewController.m */,
+				A6E60F6C1AC50EF0008BEBD3 /* Supporting Files */,
+				A6A0E3FC1B0CB3EE0020A1CA /* wardlist.txt */,
+				A6A0E4011B0CB9DF0020A1CA /* AMTownListViewController.h */,
+				A6A0E4021B0CB9DF0020A1CA /* AMTownListViewController.m */,
+				A6A0E4041B0CBE9C0020A1CA /* AMFacilityListViewController.h */,
+				A6A0E4051B0CBE9C0020A1CA /* AMFacilityListViewController.m */,
 			);
 			path = AEDMap;
 			sourceTree = "<group>";
@@ -271,8 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6E60F7B1AC50EF0008BEBD3 /* Main.storyboard in Resources */,
+				A6A0E3F81B0CACA00020A1CA /* 28HYOGO-utf-8.CSV in Resources */,
 				A6E60F801AC50EF0008BEBD3 /* LaunchScreen.xib in Resources */,
 				A6E60F7D1AC50EF0008BEBD3 /* Images.xcassets in Resources */,
+				A6A0E3FD1B0CB3EE0020A1CA /* wardlist.txt in Resources */,
 				A6E60FA11AC53C06008BEBD3 /* aed_list.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,9 +358,13 @@
 				A6E60FA71AC540FF008BEBD3 /* AMDataAnnotationView.m in Sources */,
 				A6900A651B085B2A0088840F /* AMFacilityDetailViewController.m in Sources */,
 				A6E60F9F1AC53922008BEBD3 /* CSVParser.m in Sources */,
+				A6A0E4061B0CBE9C0020A1CA /* AMFacilityListViewController.m in Sources */,
 				A6E60F721AC50EF0008BEBD3 /* AppDelegate.m in Sources */,
+				A6A0E3FB1B0CB3660020A1CA /* AMWardListViewController.m in Sources */,
 				A6E60F751AC50EF0008BEBD3 /* AMMapViewController.m in Sources */,
+				A6A0E4001B0CB91B0020A1CA /* UIColor+Hex.m in Sources */,
 				A6E60F9E1AC53922008BEBD3 /* AMDataManager.m in Sources */,
+				A6A0E4031B0CB9DF0020A1CA /* AMTownListViewController.m in Sources */,
 				A6E60F6F1AC50EF0008BEBD3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

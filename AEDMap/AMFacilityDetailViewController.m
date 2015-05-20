@@ -60,8 +60,8 @@
   region.center.latitude  = latitude;
   region.center.longitude = longitude;
   MKCoordinateSpan span;
-  span.latitudeDelta  = 0.1;
-  span.longitudeDelta = 0.1;
+  span.latitudeDelta  = 0.001;
+  span.longitudeDelta = 0.001;
   region.span = span;
   [self.mapView setRegion:region animated:NO];  
 }

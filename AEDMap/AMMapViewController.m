@@ -172,7 +172,7 @@
 					      0,
 					      self.view.bounds.size.width*0.85,
 					      self.view.bounds.size.height*0.65);
-    popupSegue.backgroundBlurRadius = 7;
+    popupSegue.backgroundBlurRadius = 4;
     popupSegue.backgroundViewAlpha = 0.3;
     popupSegue.backgroundViewColor = [UIColor blackColor];
     popupSegue.dismissableByTouchingBackground = YES;
