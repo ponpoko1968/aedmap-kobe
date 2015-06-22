@@ -6,3 +6,4 @@ pod 'GVUserDefaults', '~> 0.9'
 pod 'SVProgressHUD', '~> 1.1'
 pod 'ADClusterMapView', '~> 1.0.2'
 pod "CCMPopup"
+pod 'UIWebView-Markdown' , :git => 'https://github.com/Huddle/UIWebView-Markdown.git'

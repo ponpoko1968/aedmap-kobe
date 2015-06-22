@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -239,6 +239,39 @@
             </objects>
             <point key="canvasLocation" x="1443" y="465"/>
         </scene>
+        <!--About This App View Controller-->
+        <scene sceneID="LS7-wT-2cw">
+            <objects>
+                <viewController id="EM2-r3-XoE" customClass="AMAboutThisAppViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w3d-wq-qQZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="rxe-XR-hiC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QqI-hK-A4T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhp-kc-BDr">
+                                <rect key="frame" x="16" y="20" width="568" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rhp-kc-BDr" firstAttribute="top" secondItem="w3d-wq-qQZ" secondAttribute="bottom" id="6St-EV-zf1"/>
+                            <constraint firstItem="Rhp-kc-BDr" firstAttribute="leading" secondItem="QqI-hK-A4T" secondAttribute="leadingMargin" id="RA0-EF-f0T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rhp-kc-BDr" secondAttribute="trailing" id="abg-56-tZZ"/>
+                            <constraint firstItem="rxe-XR-hiC" firstAttribute="top" secondItem="Rhp-kc-BDr" secondAttribute="bottom" id="pjg-hf-LnJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Rhp-kc-BDr" id="Mkq-2N-8K6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AnE-cw-2PC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="1207"/>
+        </scene>
         <!--Town List View Controller-->
         <scene sceneID="X9F-WO-7Pk">
             <objects>
@@ -353,6 +386,24 @@
                             </tableViewSection>
                             <tableViewSection id="Yis-qo-741">
                                 <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Hiu-6I-uTl" style="IBUITableViewCellStyleDefault" id="u1J-Ye-tB5">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u1J-Ye-tB5" id="Hj6-e3-QFl">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="このアプリについて" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hiu-6I-uTl">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="EM2-r3-XoE" kind="show" id="hzZ-WM-vWB"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="qF2-Th-yFD" rowHeight="44" style="IBUITableViewCellStyleDefault" id="RSu-kL-tNI">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RSu-kL-tNI" id="Bbj-z7-75i">

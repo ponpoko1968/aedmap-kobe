@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6B696FB5C3B161584B4CD94A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECBE9CBBDF39DE52A1893DF /* libPods.a */; };
+		A65D99691B37DDFB00184D1C /* AMAboutThisAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65D99681B37DDFB00184D1C /* AMAboutThisAppViewController.m */; };
+		A65D996B1B37DFC900184D1C /* AboutThisApp.md in Resources */ = {isa = PBXBuildFile; fileRef = A65D996A1B37DFC900184D1C /* AboutThisApp.md */; };
 		A6900A651B085B2A0088840F /* AMFacilityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6900A641B085B2A0088840F /* AMFacilityDetailViewController.m */; };
 		A6A0E3F81B0CACA00020A1CA /* 28HYOGO-utf-8.CSV in Resources */ = {isa = PBXBuildFile; fileRef = A6A0E3F71B0CACA00020A1CA /* 28HYOGO-utf-8.CSV */; };
 		A6A0E3FB1B0CB3660020A1CA /* AMWardListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0E3FA1B0CB3660020A1CA /* AMWardListViewController.m */; };
@@ -48,6 +50,9 @@
 		00B60DB3602997F7FA70B781 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		343FF31CA01CEEDBD45252BF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5ECBE9CBBDF39DE52A1893DF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65D99671B37DDFB00184D1C /* AMAboutThisAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMAboutThisAppViewController.h; sourceTree = "<group>"; };
+		A65D99681B37DDFB00184D1C /* AMAboutThisAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMAboutThisAppViewController.m; sourceTree = "<group>"; };
+		A65D996A1B37DFC900184D1C /* AboutThisApp.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = AboutThisApp.md; sourceTree = "<group>"; };
 		A6900A631B085B2A0088840F /* AMFacilityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMFacilityDetailViewController.h; sourceTree = "<group>"; };
 		A6900A641B085B2A0088840F /* AMFacilityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMFacilityDetailViewController.m; sourceTree = "<group>"; };
 		A6A0E3F71B0CACA00020A1CA /* 28HYOGO-utf-8.CSV */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "28HYOGO-utf-8.CSV"; sourceTree = "<group>"; };
@@ -185,6 +190,9 @@
 				A6A0E4021B0CB9DF0020A1CA /* AMTownListViewController.m */,
 				A6A0E4041B0CBE9C0020A1CA /* AMFacilityListViewController.h */,
 				A6A0E4051B0CBE9C0020A1CA /* AMFacilityListViewController.m */,
+				A65D99671B37DDFB00184D1C /* AMAboutThisAppViewController.h */,
+				A65D99681B37DDFB00184D1C /* AMAboutThisAppViewController.m */,
+				A65D996A1B37DFC900184D1C /* AboutThisApp.md */,
 			);
 			path = AEDMap;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 				A6E60F7B1AC50EF0008BEBD3 /* Main.storyboard in Resources */,
 				A6A0E3F81B0CACA00020A1CA /* 28HYOGO-utf-8.CSV in Resources */,
 				A6E60F801AC50EF0008BEBD3 /* LaunchScreen.xib in Resources */,
+				A65D996B1B37DFC900184D1C /* AboutThisApp.md in Resources */,
 				A6E60F7D1AC50EF0008BEBD3 /* Images.xcassets in Resources */,
 				A6A0E3FD1B0CB3EE0020A1CA /* wardlist.txt in Resources */,
 				A6A0E4081B0CC4BB0020A1CA /* Code4Kobe-logo.png in Resources */,
@@ -361,6 +370,7 @@
 				A6E60FA81AC540FF008BEBD3 /* AMPointAnnotation.m in Sources */,
 				A6E60FA71AC540FF008BEBD3 /* AMDataAnnotationView.m in Sources */,
 				A6900A651B085B2A0088840F /* AMFacilityDetailViewController.m in Sources */,
+				A65D99691B37DDFB00184D1C /* AMAboutThisAppViewController.m in Sources */,
 				A6E60F9F1AC53922008BEBD3 /* CSVParser.m in Sources */,
 				A6A0E4061B0CBE9C0020A1CA /* AMFacilityListViewController.m in Sources */,
 				A6E60F721AC50EF0008BEBD3 /* AppDelegate.m in Sources */,
