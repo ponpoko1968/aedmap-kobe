@@ -2,11 +2,13 @@
 //  AppDelegate.m
 //  AEDMap
 //
-//  Created by 越智 修司 on 2015/03/15.
-//
+//  Created by 越智 修司 on 2015/03/27.
+//  Copyright (c) 2015年 越智 修司. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "AMDataManager.h"
+#import "UIColor+HEX.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+
+
+
+  [[UITabBar appearance] setTintColor:[UIColor colorWithHex:@"D54A00"]];
+
+  AMDataManager* manager = [AMDataManager sharedInstance];
+  [manager loadData];
   return YES;
 }
 
